@@ -1,16 +1,16 @@
 import { FC } from "react";
-import { useForm } from "react-hook-form";
 
+import { useLoginForm } from "../../hooks/useLoginForm";
 import Form from "../shared/form";
 
 const LoginForm: FC = () => {
-  const { ...methods } = useForm();
+  const { methods, onSubmit, isLoading } = useLoginForm();
 
   return (
-    <Form methods={methods} onSubmit={() => console.log("login")}>
+    <Form methods={methods} onSubmit={onSubmit}>
       <Form.Field name="Email" />
       <Form.Field name="Password" />
-      <Form.SubmitButton isLoading={false}>Login</Form.SubmitButton>
+      <Form.SubmitButton isLoading={isLoading}>Login</Form.SubmitButton>
     </Form>
   );
 };
