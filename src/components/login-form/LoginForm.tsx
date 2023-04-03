@@ -8,8 +8,8 @@ const LoginForm: FC = () => {
 
   return (
     <Form methods={methods} onSubmit={onSubmit}>
-      <Form.Field name="Email" />
-      <Form.Field name="Password" />
+      <Form.Field label="Email" name="email" />
+      <Form.Field label="Password" name="password" />
       <Form.SubmitButton isLoading={isLoading}>Login</Form.SubmitButton>
     </Form>
   );

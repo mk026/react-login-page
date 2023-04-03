@@ -8,11 +8,11 @@ const RegisterForm: FC = () => {
 
   return (
     <Form methods={methods} onSubmit={onSubmit}>
-      <Form.Field name="Name" />
-      <Form.Field name="Bio" />
-      <Form.Field name="Email" />
-      <Form.Field name="Password" />
-      <Form.Field name="Confirm Password" />
+      <Form.Field label="Name" name="name" />
+      <Form.Field label="Bio" name="bio" />
+      <Form.Field label="Email" name="email" />
+      <Form.Field label="Password" name="password" />
+      <Form.Field label="Confirm Password" name="confirmPassword" />
       <Form.SubmitButton isLoading={isLoading}>Register</Form.SubmitButton>
     </Form>
   );
