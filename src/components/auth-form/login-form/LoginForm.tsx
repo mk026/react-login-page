@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { useLoginForm } from "../../hooks/useLoginForm";
-import Form from "../shared/form";
+import { useLoginForm } from "../../../hooks/useLoginForm";
+import Form from "../../shared/form";
 
 const LoginForm: FC = () => {
   const { methods, onSubmit, isLoading } = useLoginForm();

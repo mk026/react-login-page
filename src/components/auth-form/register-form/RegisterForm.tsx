@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { useRegisterForm } from "../../hooks/useRegisterForm";
-import Form from "../shared/form";
+import { useRegisterForm } from "../../../hooks/useRegisterForm";
+import Form from "../../shared/form";
 
 const RegisterForm: FC = () => {
   const { methods, onSubmit, isLoading } = useRegisterForm();
