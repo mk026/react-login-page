@@ -1,7 +1,12 @@
 import { FC } from "react";
+import AuthForm from "../../components/auth-form/AuthForm";
 
 const AuthPage: FC = () => {
-  return <div>AuthPage</div>;
+  return (
+    <div>
+      <AuthForm />
+    </div>
+  );
 };
 
 export default AuthPage;
