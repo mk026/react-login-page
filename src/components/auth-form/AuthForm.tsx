@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 
-import LoginForm from "./login-form/LoginForm";
-import RegisterForm from "./register-form/RegisterForm";
+import LoginForm from "./login-form";
+import RegisterForm from "./register-form";
 
 const AuthForm: FC = () => {
   const [isLogin, setIsLogin] = useState(true);
