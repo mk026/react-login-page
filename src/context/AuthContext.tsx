@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, createContext, useState } from "react";
 
-import { IUser } from "../models/user";
+import { IUser } from "../types/user";
 
 export interface AuthContext {
   isAuth: boolean;
