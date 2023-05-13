@@ -5,18 +5,20 @@ import {
   LoginFormValues,
   loginValidationSchema,
 } from "../validation/loginValidation";
+import { useLoginMutation } from "./useLoginMutation";
 
 export const useLoginForm = () => {
   const { ...methods } = useForm<LoginFormValues>({
     mode: "onBlur",
     resolver: yupResolver(loginValidationSchema),
   });
+  const { mutate, isLoading } = useLoginMutation();
 
-  const loginHandler = (values: LoginFormValues) => console.log(values);
+  const loginHandler = (values: LoginFormValues) => mutate(values);
 
   return {
     methods,
     onSubmit: methods.handleSubmit(loginHandler),
-    isLoading: false,
+    isLoading,
   };
 };
