@@ -5,7 +5,7 @@ import AuthPage from "../pages/auth-page";
 import ProfilePage from "../pages/profile-page";
 
 export enum Paths {
-  HOME = "/home",
+  HOME = "/",
   PROFILE = "/profile",
   AUTH = "/auth",
 }
