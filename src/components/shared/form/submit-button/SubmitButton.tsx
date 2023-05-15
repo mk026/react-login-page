@@ -5,12 +5,17 @@ interface SubmitButtonProps extends ComponentProps<typeof Button> {
   isLoading: boolean;
 }
 
-const SubmitButton: FC<SubmitButtonProps> = ({ isLoading, children }) => {
+const SubmitButton: FC<SubmitButtonProps> = ({
+  isLoading,
+  children,
+  ...props
+}) => {
   return (
     <Button
       type="submit"
       disabled={isLoading}
       endIcon={isLoading && <CircularProgress size="1rem" color="inherit" />}
+      {...props}
     >
       {children}
     </Button>
