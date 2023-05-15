@@ -7,6 +7,8 @@ import App from "./App";
 import AuthProvider from "./context/AuthContext";
 import { queryClient } from "./api/queryClient";
 
+import "./styles/global.css";
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
