@@ -1,14 +1,17 @@
 import { FC } from "react";
+import { AppBar } from "@mui/material";
 
 import AppTitle from "./app-title";
 import AuthLinks from "./auth-links";
 
+import classes from "./Header.module.css";
+
 const Header: FC = () => {
   return (
-    <div>
+    <AppBar className={classes.header}>
       <AppTitle />
       <AuthLinks />
-    </div>
+    </AppBar>
   );
 };
 

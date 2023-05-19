@@ -1,0 +1,7 @@
+.header {
+  position: sticky;
+  flex-flow: row wrap;
+  padding: 1rem;
+
+  background-color: #4d5271;
+}
