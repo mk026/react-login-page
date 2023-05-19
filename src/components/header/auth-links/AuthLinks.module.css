@@ -1,0 +1,18 @@
+.login-link {
+  margin-right: 1rem;
+
+  background-color: #34374b;
+}
+.login-link:hover {
+  background-color: #707597;
+}
+
+.register-link {
+  color: inherit;
+
+  border: none;
+}
+.register-link:hover {
+  border: none;
+  background-color: #707597;
+}
