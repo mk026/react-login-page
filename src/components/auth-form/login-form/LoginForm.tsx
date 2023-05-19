@@ -16,7 +16,7 @@ const LoginForm: FC<LoginFormProps> = ({ changeAuthMode }) => {
       <Typography>Login</Typography>
       <Form methods={methods} onSubmit={onSubmit}>
         <Form.Field label="Email" name="email" />
-        <Form.Field label="Password" name="password" />
+        <Form.Field label="Password" name="password" type="password" />
         <Form.SubmitButton isLoading={isLoading}>Login</Form.SubmitButton>
       </Form>
       <Typography>

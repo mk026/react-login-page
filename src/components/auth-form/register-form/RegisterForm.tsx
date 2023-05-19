@@ -18,8 +18,12 @@ const RegisterForm: FC<RegisterFormProps> = ({ changeAuthMode }) => {
         <Form.Field label="Name" name="name" />
         <Form.Field label="Bio" name="bio" />
         <Form.Field label="Email" name="email" />
-        <Form.Field label="Password" name="password" />
-        <Form.Field label="Confirm Password" name="confirmPassword" />
+        <Form.Field label="Password" name="password" type="password" />
+        <Form.Field
+          label="Confirm Password"
+          name="confirmPassword"
+          type="password"
+        />
         <Form.SubmitButton isLoading={isLoading}>Register</Form.SubmitButton>
       </Form>
       <Typography>
