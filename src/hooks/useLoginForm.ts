@@ -6,13 +6,23 @@ import {
   loginValidationSchema,
 } from "../validation/loginValidation";
 import { useLoginMutation } from "./useLoginMutation";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Paths } from "../routes";
 
 export const useLoginForm = () => {
   const { ...methods } = useForm<LoginFormValues>({
     mode: "onBlur",
     resolver: yupResolver(loginValidationSchema),
   });
-  const { mutate, isLoading } = useLoginMutation();
+  const { mutate, isLoading, isSuccess } = useLoginMutation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isSuccess) {
+      navigate(Paths.PROFILE);
+    }
+  }, [isSuccess]);
 
   const loginHandler = (values: LoginFormValues) => mutate(values);
 
