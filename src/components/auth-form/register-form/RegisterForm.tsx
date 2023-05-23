@@ -18,17 +18,11 @@ const RegisterForm: FC<RegisterFormProps> = ({ changeAuthMode }) => {
     <FormCard>
       <FormTitle>Register</FormTitle>
       <Form methods={methods} onSubmit={onSubmit}>
-        <Form.Field fullWidth label="Name" name="name" />
-        <Form.Field fullWidth multiline label="Bio" name="bio" />
-        <Form.Field fullWidth label="Email" name="email" />
+        <Form.Field label="Name" name="name" />
+        <Form.Field multiline label="Bio" name="bio" />
+        <Form.Field label="Email" name="email" />
+        <Form.Field label="Password" name="password" type="password" />
         <Form.Field
-          fullWidth
-          label="Password"
-          name="password"
-          type="password"
-        />
-        <Form.Field
-          fullWidth
           label="Confirm Password"
           name="confirmPassword"
           type="password"
