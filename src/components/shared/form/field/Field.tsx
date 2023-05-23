@@ -21,6 +21,7 @@ const FormField: FC<FormFieldProps> = ({
       {...register(name)}
       error={!!errors[name]}
       helperText={errors[name]?.message as string}
+      fullWidth
       className={className ? classes.field + " " + className : classes.field}
       {...textFieldProps}
     />
