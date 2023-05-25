@@ -1,3 +1,9 @@
+:root {
+  --dark-purple: #34374b;
+  --medium-purple: #4d5271;
+  --light-purple: #707597;
+}
+
 html {
   font-size: 16px;
 }
