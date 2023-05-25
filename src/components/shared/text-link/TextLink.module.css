@@ -1,7 +1,7 @@
 .link {
-  color: #34374b;
+  color: var(--dark-purple);
 }
 
 .link:hover {
-  color: #707597;
+  color: var(--light-purple);
 }

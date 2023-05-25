@@ -1,11 +1,11 @@
 .submit {
   font-size: 1rem;
-  color: #34374b;
+  color: var(--dark-purple);
 
   transition: all 0.2s linear;
 }
 
 .submit:hover {
-  background-color: #34374b;
+  background-color: var(--dark-purple);
   color: #ffffff;
 }

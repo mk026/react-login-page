@@ -1,7 +1,7 @@
 .title {
   font-size: 1.5rem;
   text-align: center;
-  color: #34374b;
+  color: var(--dark-purple);
 
   margin-bottom: 2rem;
 }

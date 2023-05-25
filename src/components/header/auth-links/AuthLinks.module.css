@@ -1,10 +1,10 @@
 .login-link {
   margin-right: 1rem;
 
-  background-color: #34374b;
+  background-color: var(--dark-purple);
 }
 .login-link:hover {
-  background-color: #707597;
+  background-color: var(--light-purple);
 }
 
 .register-link {
@@ -14,5 +14,5 @@
 }
 .register-link:hover {
   border: none;
-  background-color: #707597;
+  background-color: var(--light-purple);
 }
