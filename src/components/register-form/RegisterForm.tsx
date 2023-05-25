@@ -16,7 +16,7 @@ const RegisterForm: FC = () => {
       <FormTitle>Register</FormTitle>
       <Form methods={methods} onSubmit={onSubmit}>
         <Form.Field label="Name" name="name" />
-        <Form.Field multiline label="Bio" name="bio" />
+        <Form.Field multiline label="About Yourself" name="bio" />
         <Form.Field label="Email" name="email" />
         <Form.Field label="Password" name="password" type="password" />
         <Form.Field
