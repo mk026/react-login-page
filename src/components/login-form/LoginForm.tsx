@@ -1,17 +1,13 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
 
-import { useLoginForm } from "../../../hooks/useLoginForm";
-import Form from "../../shared/form";
-import FormCard from "../../shared/form-card";
-import FormTitle from "../../shared/form-title";
-import FormInfo from "../../shared/form-info";
+import { useLoginForm } from "../../hooks/useLoginForm";
+import Form from "../shared/form";
+import FormCard from "../shared/form-card";
+import FormTitle from "../shared/form-title";
+import FormInfo from "../shared/form-info";
 
-interface LoginFormProps {
-  changeAuthMode: () => void;
-}
-
-const LoginForm: FC<LoginFormProps> = ({ changeAuthMode }) => {
+const LoginForm: FC = () => {
   const { methods, onSubmit, isLoading } = useLoginForm();
 
   return (
@@ -23,8 +19,7 @@ const LoginForm: FC<LoginFormProps> = ({ changeAuthMode }) => {
         <Form.SubmitButton isLoading={isLoading}>Login</Form.SubmitButton>
       </Form>
       <FormInfo>
-        Don't have an account?{" "}
-        <Button onClick={changeAuthMode}>Register</Button>
+        Don't have an account? <Button>Register</Button>
       </FormInfo>
     </FormCard>
   );

@@ -1,17 +1,13 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
 
-import { useRegisterForm } from "../../../hooks/useRegisterForm";
-import Form from "../../shared/form";
-import FormCard from "../../shared/form-card";
-import FormTitle from "../../shared/form-title";
-import FormInfo from "../../shared/form-info";
+import { useRegisterForm } from "../../hooks/useRegisterForm";
+import Form from "../shared/form";
+import FormCard from "../shared/form-card";
+import FormTitle from "../shared/form-title";
+import FormInfo from "../shared/form-info";
 
-interface RegisterFormProps {
-  changeAuthMode: () => void;
-}
-
-const RegisterForm: FC<RegisterFormProps> = ({ changeAuthMode }) => {
+const RegisterForm: FC = () => {
   const { methods, onSubmit, isLoading } = useRegisterForm();
 
   return (
@@ -30,7 +26,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ changeAuthMode }) => {
         <Form.SubmitButton isLoading={isLoading}>Register</Form.SubmitButton>
       </Form>
       <FormInfo>
-        Already have an account? <Button onClick={changeAuthMode}>Login</Button>
+        Already have an account? <Button>Login</Button>
       </FormInfo>
     </FormCard>
   );
