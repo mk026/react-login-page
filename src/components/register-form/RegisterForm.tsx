@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { Button } from "@mui/material";
 
 import { useRegisterForm } from "../../hooks/useRegisterForm";
 import Form from "../shared/form";
 import FormCard from "../shared/form-card";
 import FormTitle from "../shared/form-title";
 import FormInfo from "../shared/form-info";
+import TextLink from "../shared/text-link";
+import { Paths } from "../../routes";
 
 const RegisterForm: FC = () => {
   const { methods, onSubmit, isLoading } = useRegisterForm();
@@ -26,7 +27,7 @@ const RegisterForm: FC = () => {
         <Form.SubmitButton isLoading={isLoading}>Register</Form.SubmitButton>
       </Form>
       <FormInfo>
-        Already have an account? <Button>Login</Button>
+        Already have an account? <TextLink to={Paths.LOGIN}>Login</TextLink>
       </FormInfo>
     </FormCard>
   );

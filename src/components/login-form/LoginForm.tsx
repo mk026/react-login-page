@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { Button } from "@mui/material";
 
 import { useLoginForm } from "../../hooks/useLoginForm";
 import Form from "../shared/form";
 import FormCard from "../shared/form-card";
 import FormTitle from "../shared/form-title";
 import FormInfo from "../shared/form-info";
+import TextLink from "../shared/text-link";
+import { Paths } from "../../routes";
 
 const LoginForm: FC = () => {
   const { methods, onSubmit, isLoading } = useLoginForm();
@@ -19,7 +20,7 @@ const LoginForm: FC = () => {
         <Form.SubmitButton isLoading={isLoading}>Login</Form.SubmitButton>
       </Form>
       <FormInfo>
-        Don't have an account? <Button>Register</Button>
+        Don't have an account? <TextLink to={Paths.REGISTER}>Register</TextLink>
       </FormInfo>
     </FormCard>
   );
