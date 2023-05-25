@@ -13,7 +13,7 @@ const AuthLinks: FC = () => {
         variant="outlined"
         className={classes["register-link"]}
         component={Link}
-        to={Paths.AUTH}
+        to={Paths.REGISTER}
       >
         Register
       </Button>
@@ -21,7 +21,7 @@ const AuthLinks: FC = () => {
         variant="contained"
         className={classes["login-link"]}
         component={Link}
-        to={Paths.AUTH}
+        to={Paths.LOGIN}
       >
         Login
       </Button>
