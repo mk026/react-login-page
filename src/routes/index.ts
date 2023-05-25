@@ -1,13 +1,15 @@
 import { ComponentType } from "react";
 
 import HomePage from "../pages/home-page";
-import AuthPage from "../pages/auth-page";
 import ProfilePage from "../pages/profile-page";
+import LoginPage from "../pages/login-page";
+import RegisterPage from "../pages/register-page";
 
 export enum Paths {
   HOME = "/",
   PROFILE = "/profile",
-  AUTH = "/auth",
+  LOGIN = "/login",
+  REGISTER = "/register",
 }
 
 export interface IRoute {
@@ -17,7 +19,8 @@ export interface IRoute {
 
 export const publicRoutes: IRoute[] = [
   { path: Paths.HOME, Component: HomePage },
-  { path: Paths.AUTH, Component: AuthPage },
+  { path: Paths.LOGIN, Component: LoginPage },
+  { path: Paths.REGISTER, Component: RegisterPage },
 ];
 
 export const protectedRoutes: IRoute[] = [
